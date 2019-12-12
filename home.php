@@ -19,6 +19,8 @@
 
         <input name="newGame" class="btn btn-primary" type="button" value="Play!" onclick="window.open('./game.php')" />
 
+        <?php require "new-blackjack.php"; ?>
+
     </div>
 </body>
 

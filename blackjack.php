@@ -22,7 +22,8 @@ class Blackjack
     }
 
     public function Stand()
-    { dealerTurn()
+    { 
+        dealerTurn();
 
     }
 
@@ -54,9 +55,9 @@ class Dealer extends Blackjack
 
 function dealerTurn($dealer , $dealerScore, $playerScore){
 
-    if ($dealerScore < 18) {
+    if ($dealerScore < 16) {
         $dealer->hit();
-    } else if ($dealerScore >= 18 && $dealerScore < $playerScore){
+    } else if ($dealerScore >= 16 && $dealerScore < $playerScore){
         $dealer->hit();
     } else {
         $dealer->stand();
