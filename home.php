@@ -15,9 +15,11 @@
             <h1> Blackjack </h1>
         </span>
 
-        <input name="newRules" class="btn btn-secondary" type="button" value="Rules" onclick="window.open('./rules.php')" />
+        <input name="newRules" class="btn btn-secondary" type="button" value="Rules" onclick="window.location = './rules.php')" />
 
-        <input name="newGame" class="btn btn-primary" type="button" value="Play!" onclick="window.open('./game.php')" />
+        <input name="newGame" class="btn btn-primary" type="button" value="Play!" onclick="window.location = './game.php';" />
+
+        <?php require "blackjack.php"; ?>
 
     </div>
 </body>
