@@ -83,11 +83,14 @@ if($winMessage == null && $endOfPlayerTurn) {
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-    <title>Playin' Blackjack</title>
+    <link rel="stylesheet" href="style.php" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <title>LG - Blackjack</title>
 </head>
 
 <body>
-    <div id="home-container">
+    <div id="blackjack-container">
         <span>
             <h1> Blackjack </h1>
         </span>
@@ -95,7 +98,7 @@ if($winMessage == null && $endOfPlayerTurn) {
         <p> Wins : <?php echo $wincount ?> </p>
 
         <!-- DEALER -->
-        <div>
+        <div id="dealer">
             <?php 
                 if($dealerRevealsHand) {
                     $dealerHand->Show(); 
@@ -106,7 +109,7 @@ if($winMessage == null && $endOfPlayerTurn) {
         </div>
 
         <!-- PLAYER -->
-        <div>            
+        <div id="player">            
             <?php 
                 
                 $playerHand->Show(); 
@@ -123,14 +126,20 @@ if($winMessage == null && $endOfPlayerTurn) {
         <div>
             <?php
                 if($winMessage == null) { ?>
-                    <input class="btn btn-primary" type="button" value="Hit" onclick="window.location = './game.php?action=hit';" />
-                    <input class="btn btn-primary" type="button" value="Stand" onclick="window.location = './game.php?action=stand';" />
-                    <input class="btn btn-primary" type="button" value="Surrender" onclick="window.location = './game.php?action=surrender';" />
+                <div id="game-controls">
+                    <input class="btn btn-light" type="button" value="Hit" onclick="window.location = './game.php?action=hit';" />
+                    <input class="btn btn-light" type="button" value="Stand" onclick="window.location = './game.php?action=stand';" />
+                    <input class="btn btn-light" type="button" value="Surrender" onclick="window.location = './game.php?action=surrender';" />
+                    </div>
                 <?php } else { 
                     echo "<p style='color: blue;'>" . $winMessage . "</p>";
                  } ?>
-                
-                <input class="btn btn-primary" type="button" value="New Game" onclick="window.location = './game.php';" />
+                <div id="navigation-controls">
+                <br>
+                <input class="btn btn-success" type="button" value="New Game" onclick="window.location = './game.php';" />
+                <input class="btn btn-info" type="button" value="Rules" onclick="window.location = './rules.php';" />
+                <input class="btn btn-danger" type="button" value="Home" onclick="window.location = './home.php';" />
+</div>
         </div>
 
 

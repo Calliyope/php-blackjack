@@ -31,9 +31,10 @@
             </p>
         </div>
 
-        <input name="toHome" class="btn btn-danger" type="button" value="Exit" onclick="window.open('./home.php')" />
+        <input name="newGame" class="btn btn-primary" type="button" value="Play!" onclick="window.location = './game.php';" />
 
-        <input name="newGame" class="btn btn-primary" type="button" value="Play!" onclick="window.open('./game.php')" />
+        <input name="toHome" class="btn btn-danger" type="button" value="Home" onclick="window.location = './home.php';" />
+
 
     </div>
 </body>
